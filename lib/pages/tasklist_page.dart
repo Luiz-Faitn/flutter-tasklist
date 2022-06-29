@@ -128,11 +128,18 @@ class _TaskListPageState extends State<TaskListPage> {
                     Expanded(
                       child: TextField(
                         controller: taskController,
-                        decoration: const InputDecoration(
-                            border: OutlineInputBorder(),
+                        decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
                             labelText: "Adicione uma Task",
                             hintText: "Ex: Tarefa - 01",
                             errorText: erroMsg,
+                            labelStyle: const TextStyle(color: Colors.deepPurple),
+                            focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.deepPurple,
+                                width: 2,
+                              )
+                            )
                           ),
                         ),
                       ),
